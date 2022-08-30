@@ -1,0 +1,27 @@
+
+<div class="card">
+  <button class="button button-stable button-clear" (click)="ProductSelectedDetails(product)" routerLink="/productItemDetail">
+    <img src="{{product.url}}" alt="product image for {{product.name}}"   />
+  </button>
+  <h4 class="title">
+    {{product.name}}
+  </h4>
+  <h5>
+    {{product.price.toFixed(2)}}
+  </h5>
+  <ng-content></ng-content>
+
+  <div fxLayout="column" fxLayoutAlign="center center"
+       class="text-center">
+    <select class="form-control" [(ngModel)]="amountSelected" (ngModelChange)="onChange($event)">
+      <option *ngFor="let option of Options" [value]="option">{{option}}</option>
+    </select>
+  </div>
+
+
+  <br />
+
+  <button class="btn btn-more" (click)="add(product)">Add To Cart</button>
+
+
+</div>

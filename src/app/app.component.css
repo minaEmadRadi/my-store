@@ -1,0 +1,22 @@
+.navbar {
+  /*display:flex;*/
+  background-color: dodgerblue;
+  color: aqua;
+}
+
+.site-name {
+  padding-top: 7px;
+  text-align: center;
+}
+
+.site-menu {
+  padding: 7px 30px;
+  text-align: center
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 0px 10px;
+}
+

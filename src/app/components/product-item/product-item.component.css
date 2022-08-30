@@ -1,0 +1,41 @@
+
+.btn-more {
+  min-width: 160px;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: aqua;
+  border: none;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+
+img {
+  object-fit: cover;
+  width: auto;
+  max-height: 10rem;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 10px 0;
+  margin: 15px 15px;
+  background-color: white;
+  text-align: center;
+
+}
+
+.summary {
+  font-size: 14px;
+}
+
+
+.btn-more {
+  min-width: 160px;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: aqua;
+  border: none;
+}

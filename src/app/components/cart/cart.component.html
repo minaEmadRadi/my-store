@@ -1,0 +1,66 @@
+<div fxLayout="row" fxLayoutAlign="center start" class="cart-details">
+  <div fxLayout="column" fxLayoutAlign="start start" fxFlex="50" fxLayoutGap="2rem" class="card">
+    <div *ngFor="let cartItem of cartItems">
+
+      <div class="card-A">
+
+        <div class="imgCard" fxLayout="column">
+          <img src="{{cartItem.url}}" alt="product image for {{cartItem.name}}" />
+        </div>
+
+        <div>
+          <h4 class="title">
+            {{cartItem.name}}
+          </h4>
+          <h5>
+            {{cartItem.price.toFixed(2)}}
+          </h5>
+          <input type="number" min="1" max="10" class="form-control text-center"
+                 value="cartItem.amount"
+                 autocomplete="off"
+                 [ngModel]="cartItem.amount"
+                 (ngModelChange)="onChangeAmount(cartItem,$event) ">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" fxFlex="30" fxLayoutGap="1rem">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+
+      <mat-form-field class="form-element" appearance="fill">
+        <input matInput placeholder="FullName" formControlName="FullName"[(ngModel)]="fullName" minlength="3" maxlength="32">
+        <mat-error *ngIf="!formGroup.controls['FullName'].valid && formGroup.controls['FullName'].touched">
+          Full Name Required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-element" appearance="fill">
+        <input  [(ngModel)]="address"  matInput placeholder="Adress" formControlName="Adress" minlength="6" maxlength="32">
+        <mat-error *ngIf="!formGroup.controls['Adress'].valid && formGroup.controls['Adress'].touched">
+          Adress rquiered
+        </mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field class="form-element" appearance="fill">
+        <input type="text" [(ngModel)]="creditCardNumber" (ngModelChange)="onChangeForm($event)" matInput placeholder="CardNumber" formControlName="CardNumber" minlength="16" maxlength="16" numbersOnly>
+        <mat-error *ngIf="!formGroup.controls['CardNumber'].valid && formGroup.controls['CardNumber'].touched">
+          number is requiered
+        </mat-error>
+      </mat-form-field>
+
+
+
+      <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button" (click)="submitCartItems()" [disabled]="!formGroup.valid" routerLink="/Confirmation">Submit Form</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+<h1>Total: <span>${{totalAmount.toFixed(2)}}</span></h1>
+<button class="btn btn-more" (click)="delete()">delete</button>
+

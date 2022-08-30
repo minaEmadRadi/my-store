@@ -1,0 +1,15 @@
+.container {
+  
+  padding: 10px 250px;
+  background-color: aliceblue;
+}
+
+.more-products {
+ 
+ 
+
+  display: flex;
+  flex-wrap: wrap;
+  /*overflow-x: scroll;
+*/ flex: 1 0 21%;
+}

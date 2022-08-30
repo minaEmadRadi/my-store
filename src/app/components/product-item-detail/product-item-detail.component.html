@@ -1,0 +1,14 @@
+<app-product-item [product]="product" (addToCartP)="addToCartP($event)" [amountSelected]="amountSelected" >
+
+  <p class="description">{{product.description}}</p>
+
+
+</app-product-item>
+<div fxLayout="column" fxLayoutAlign="center center"
+     class="text-center">
+  <button mat-flat-button color="primary" (click)="removeFromCartAction(product)">Remove from cart</button>
+</div>
+<div fxLayout="column" fxLayoutAlign="center center"
+     class="text-center">
+  <button mat-flat-button routerLink="/products" class="back-link" style="align-content:space-evenly">Back to products list</button>
+</div>
