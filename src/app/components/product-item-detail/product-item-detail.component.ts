@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../models/Product';
 import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-product-item-detail',
@@ -13,7 +14,11 @@ export class ProductItemDetailComponent implements OnInit {
   amountSelected: number = 1;
   id: number = 1;
 
-  constructor(private _productService: ProductService, private route: ActivatedRoute) {
+  constructor(
+    private _productService: ProductService,
+    private _cartService: CartService, 
+    private route: ActivatedRoute) {
+
     this.id = Number(this.route.snapshot.paramMap.get('product'));
 
 }
@@ -23,13 +28,13 @@ export class ProductItemDetailComponent implements OnInit {
       .subscribe(products => products.length !== 0 ? this.product = products[0] : undefined);
   }
   removeFromCartAction(product: Product) {
-    this._productService.removeFromCart(product);
+    this._cartService.removeFromCart(product);
     alert(product.name + " deleted");
 
   }
   addToCartP(product: Product): void {
     this.amountSelected = product.amount;
-    this._productService.addProductToCart(product);
+    this._cartService.addProductToCart(product);
 
     alert(product.name + " added");
   }

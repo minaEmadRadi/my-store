@@ -1,7 +1,5 @@
 import { Component, OnInit ,Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../models/Product';
-import { CartItem } from '../models/CartItem';
-import { ProductService } from '../services/product.service';
 import { Router } from '@angular/router';
 
 
@@ -21,7 +19,7 @@ export class ProductItemComponent implements OnInit {
   Options: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   
-  constructor(private _productService: ProductService, private router: Router) {
+  constructor( private router: Router) {
 }
 
   ngOnInit(): void {
