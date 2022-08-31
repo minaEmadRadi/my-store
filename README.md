@@ -56,7 +56,9 @@
 
 <!--<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=minaemadradi&show_icons=true&locale=en" alt="minaemadradi" /></p>
 -->
-<br>
+
+
+<p> </p>
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 [![My Store][product-screenshot]](https://drive.google.com/file/d/1sJZIp1zwKtSVeZ2vik6EJ5cBUwjkcKjk/view?usp=sharing)
