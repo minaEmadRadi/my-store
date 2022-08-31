@@ -58,7 +58,7 @@
 -->
 
 
-<p> </p>
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 [![My Store][product-screenshot]](https://drive.google.com/file/d/1sJZIp1zwKtSVeZ2vik6EJ5cBUwjkcKjk/view?usp=sharing)
