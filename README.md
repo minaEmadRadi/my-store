@@ -169,7 +169,7 @@ Distributed under the MIT License.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/minaEmadRadi/my-store-final.git](https://github.com/minaEmadRadi/my-store-final.git) - mena160348@bfci.bu.edu.eg
+Project Link: [https://github.com/minaEmadRadi/my-store.git](https://github.com/minaEmadRadi/my-store-final.git) - mena160348@bfci.bu.edu.eg
 
 Linkedin - [https://linkedin.com/Mina-Emad-Radi](https://linkedin.com/in/Mina-Emad-Radi)
 
